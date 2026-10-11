@@ -3,18 +3,20 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
+  base: '/babybites/',
   plugins: [
     react(),
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['icon.svg', 'icon-192.png', 'icon-512.png'],
       manifest: {
-        id: '/',
+        id: '/babybites/',
         name: 'BabyBites',
         short_name: 'BabyBites',
         description: 'Voorraad van zelfgemaakte babyvoeding bijhouden.',
         lang: 'nl-BE',
-        start_url: '/',
+        start_url: '/babybites/',
+        scope: '/babybites/',
         display: 'standalone',
         background_color: '#fff8f3',
         theme_color: '#ff7c69',
